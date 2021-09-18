@@ -26,6 +26,7 @@ def hacker_speak(str)
 
         end
     end
+    a
 end
 
 p hacker_speak("javascript is cool")
