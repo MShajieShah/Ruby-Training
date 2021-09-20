@@ -17,17 +17,17 @@
 # XO("zzoo") ➞ false
 # ---------------------------------------------------------------------------------------------------------
 def xoequal(s)
-    s = s.downcase
-    if s.count('x') != s.count('o')
-        puts false
-    elsif s.count('x') < 0 || s.count('o') < 0
-        puts true
-    elsif s.count('x') == s.count('o')
-        puts true
-    end
+  s = s.downcase
+  if s.count('x') != s.count('o')
+    puts false
+  elsif s.count('x') < 0 || s.count('o') < 0
+    puts true
+  elsif s.count('x') == s.count('o')
+    puts true
+  end
 end
-    xoequal("ooxx")
-    xoequal("xooxx")
-    xoequal("ooxXm")
-    xoequal("zpzpzpp")
-    xoequal("zzoo")
+xoequal("ooxx")
+xoequal("xooxx")
+xoequal("ooxXm")
+xoequal("zpzpzpp")
+xoequal("zzoo")

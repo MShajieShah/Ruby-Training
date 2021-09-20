@@ -7,13 +7,13 @@
 # equal(3, 4, 1) ➞ 0
 # ----------------------------------------------------------------------------------------------------------------------------------
 def equal(a,b,c)
-    if a==b && a==c
-        return 3
-    elsif a==b||a==c
-        return 2
-    else
-        return 0
-    end
+  if a==b && a==c
+      return 3
+  elsif a==b||a==c
+      return 2
+  else
+      return 0
+  end
 end
 puts equal(3, 4, 3)
 puts equal(1, 1, 1)

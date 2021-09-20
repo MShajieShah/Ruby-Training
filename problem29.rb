@@ -10,15 +10,13 @@
 
 # jazzify([]) ➞ []
 
-
-
 def jazzify(arr)
-	arr.each do 
-	  |item| 
-	    if item.include?("7")
-	    else
-		    item << "7"
-	    end
+  arr.each do |item| 
+    if item.include?("7")
+		  return arr
+	  else
+  	  item << "7"
+    end
   end
 	return arr
 end

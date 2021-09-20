@@ -13,8 +13,8 @@
 
 
 def mirror(array)
-    array1 = array.reverse[1...(array.length)]
-    return array+array1
+  array1 = array.reverse[1...(array.length)]
+  return array+array1
 end
 p mirror([0, 2, 4, 6])
 p mirror([1, 2, 3, 4, 5])

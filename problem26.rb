@@ -8,11 +8,11 @@
 # ----------------------------------------------------------------------------------------------------------
 
 def is_subset(arr,b)
-    if arr.all? { |i| b.include?(i) }
-     return true
-    else
-     return false
-    end
+  if arr.all? { |i| b.include?(i) }
+   return true
+  else
+   return false
+  end
 end
    
 p is_subset([3, 2, 5], [5, 3, 7, 9, 2]) 

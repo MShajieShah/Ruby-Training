@@ -8,15 +8,15 @@
 # parityAnalysis(3) ➞ true
 # // 3 is odd and 3 is odd and 3 is odd (3)
 def parityAnalysis(int)
-    b = int.to_s.split("")
-    c =b.inject(0) {|s,e| s.to_i + e.to_i }
-    if c.odd? == int.odd?
-        return true
-    elsif c.even? == int.even?
-        return true
-    else
-        return false
-    end
+  b = int.to_s.split("")
+  c =b.inject(0) {|s,e| s.to_i + e.to_i }
+  if c.odd? == int.odd?
+     return true
+  elsif c.even? == int.even?
+     return true
+  else
+     return false
+  end
 end
 p parityAnalysis(3)
 p parityAnalysis(12) 

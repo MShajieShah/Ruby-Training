@@ -10,13 +10,13 @@
 # spelling("eagerly") ➞ ["e", "ea", "eag", "eage", "eager", "eagerl", "eagerly"]
 # -------------------------------------------------------------------------------------------------------------------------------
 def spelling(str)
-	arr = []
-	i = 0
-	while i < str.length
-		arr << str[0..i]
-		i += 1
-	end
-	arr
+  arr = []
+  i = 0
+  while i < str.length
+  	 arr << str[0..i]
+  	 i += 1
+  end
+  arr
 end
 p spelling("bee")
 p spelling("happy")

@@ -13,24 +13,24 @@
 # flip_end_chars([1, 2, 3]) ➞ "Incompatible."
 #------------------------------------------------------------------------------------------------------------------------
 def flip_end_chars(a)
-    if a.is_a? Array
-        puts "Incompatiable"
-    elsif a.length==1
-        puts "Incompatiable"
-    elsif a.slice(0) == a.slice(-1)
-        puts "Two Pairs"
-    elsif a.length<2
-        puts "Incompatiable"
-    else
-        b=a.split('')
-        c=b.shift()
-        d=b.pop
-        b.unshift(d)
-        b.push(c)
-        puts b.join("")   
-         
-    end
-
+  if a.is_a? Array
+      puts "Incompatiable"
+  elsif a.length==1
+      puts "Incompatiable"
+  elsif a.slice(0) == a.slice(-1)
+      puts "Two Pairs"
+  elsif a.length<2        
+      puts "Incompatiable"
+  else
+      b=a.split('')
+      c=b.shift()
+      d=b.pop
+      b.unshift(d)
+      b.push(c)
+      puts b.join("")   
+       
+  end
+  
 end
 flip_end_chars("Cats, dogs and mouse.")
 flip_end_chars("Ada")

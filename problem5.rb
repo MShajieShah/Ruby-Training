@@ -12,16 +12,16 @@
 # Floats and empty arrays will not be used in any of the test cases.
 # ------------------------------------------------------------------------------------------------------------------------------------------------
 def sum_two_smallest_nums(array)
-    arr =[]
-    sorted = array.sort
-sorted.each do |x|
-   if x < 0
-      sorted.pop
-   else
-      arr << x
+  arr =[]
+  sorted = array.sort
+   sorted.each do |x|
+     if x < 0
+       sorted.pop
+     else
+       arr << x
+     end
    end
- end
- arr[0]+arr[1]
+  arr[0]+arr[1]
 end
 
 p sum_two_smallest_nums([19, 5, 42, 2, 77]) 

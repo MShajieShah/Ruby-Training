@@ -11,13 +11,13 @@
 # oddishOrEvenish(4433) ➞ "Evenish"
 
 def oddishOrEvenish(int)
-    b = int.to_s.split("")
-    c =b.inject(0) {|s,e| s.to_i + e.to_i }
-    if c.odd?
-        return "Oddish"
-    else c.even?
-        return "Evenish"
-    end
+  b = int.to_s.split("")
+  c =b.inject(0) {|s,e| s.to_i + e.to_i }
+  if c.odd?
+     return "Oddish"
+  else c.even?
+     return "Evenish"
+  end
 end
 p oddishOrEvenish(43)
 p oddishOrEvenish(373)

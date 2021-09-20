@@ -14,23 +14,19 @@
 
 
 def sum_odd_and_even(arr)
-	
-	even_total = 0
-	odd_total = 0
-	
-	for x in arr
-		if x.even?
-			even_total += x
-		else
-			odd_total += x
-		end
-	end
-	
-	answer = []
-	answer.push(even_total)
-	answer.push(odd_total)
-	return answer
-		
+  even_total = 0
+  odd_total = 0
+  for x in arr
+  	if x.even?
+  	  even_total += x
+  	else
+  	  odd_total += x
+  	end
+  end
+  answer = []
+  answer.push(even_total)
+  answer.push(odd_total)
+  return answer
 end
 
 p sum_odd_and_even([0, 0])

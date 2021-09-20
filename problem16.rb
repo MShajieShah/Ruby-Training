@@ -9,23 +9,22 @@
 
 
 def hacker_speak(str)
-    a = ''
-    str.each_char do |x|
-        if x == 'a'
-            a = a +'4'
-        elsif x == 's'
-            a = a + '5'  
-        elsif x == 'e'
-            a = a+'3'
-        elsif x ==  'i'
-            a = a + '1'
-        elsif x == 'o'
-            a = a + '0'
-        else 
-            a = a + x
-
-        end
-    end
+  a = ''
+  str.each_char do |x|
+      if x == 'a'
+          a = a +'4'
+      elsif x == 's'
+          a = a + '5'  
+      elsif x == 'e'
+          a = a+'3'
+      elsif x ==  'i'
+          a = a + '1'
+      elsif x == 'o'
+          a = a + '0'
+      else 
+          a = a + x
+      end
+  end
     a
 end
 

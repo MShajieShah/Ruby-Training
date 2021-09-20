@@ -10,15 +10,13 @@
 # odd_product([1, 2, 1, 2, 1, 2, 1, 2]) ➞ 1
 #------------------------------------------------------------------------------------------------------------------
 def odd_product(arr)
-	product = 1
-	
-	arr.each do |num|
-		if num % 2 == 1
-			product *= num
-		end
-	end
-	
-	return product
+  product = 1
+  arr.each do |num|
+     if num % 2 == 1
+  	   product *= num
+     end
+  end
+  return product
 end
 
 p odd_product([3, 4, 1, 1, 5])

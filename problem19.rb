@@ -11,18 +11,18 @@
 # # Index 3 has an even number 8.
 #---------------------------------------------------------------------------------------------------------------------------------
 def is_special_array(array)
-    array.each_with_index do |x,index|
-        if index.even?
-            if (x%2 == 1)
-             return false
-            end
-        else 
-           if (x%2 == 0)
-            return false
-           end
+  array.each_with_index do |x,index|
+     if index.even?
+         if (x%2 == 1)
+          return false
+         end
+     else 
+        if (x%2 == 0)
+         return false
         end
-    end
-    return true
+     end
+  end
+  return true
 end
 p is_special_array([2,7,4,1,6,1,8,3])
 p is_special_array([2, 7, 9, 1, 6, 1, 6, 3]) 

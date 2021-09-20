@@ -11,20 +11,21 @@
 # has_hidden_fee(["$1"], "$4") ➞ true
 #---------------------------------------------------------------------------------------------------------------------------- 
 def has_hidden_fee(arr,x)
-    new_arr = []
-    i = 0
-    while i<=arr.length() do
-        b = arr.shift()
-        b.delete!("$")
-        arr.push(b)
-        i+=1
-      end
-      c = arr.inject(0) {|s,e| s.to_i + e.to_i }
+  new_arr = []
+  i = 0
+  while i<=arr.length do
+      b = arr.shift
+      b.delete!("$")
+      arr.push(b)
+      i+=1
+    end
+    c = arr.inject(0) {|s,e| s.to_i + e.to_i }
     if x.delete!("$").to_i == c
       return false
-    else true
+    else
+      return true
     end
-  end
+end
       
 p has_hidden_fee(["$1","$2"],"$3")
 p has_hidden_fee(["$1","$2"],"$4")
