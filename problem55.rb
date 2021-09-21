@@ -11,9 +11,9 @@
 
 
   
-  def dashed(str)
-    vowels=['a','e','i','o','u','A','E','I','O','U']
-    str.chars.map{|x| (vowels.include? x)? "-"+x+"-" : x}.join
+def dashed(str)
+  vowels=['a','e','i','o','u','A','E','I','O','U']
+  str.chars.map{|x| (vowels.include? x)? "-"+x+"-" : x}.join
 end
 p dashed("Edabit") 
 p dashed("Carpe Diem")

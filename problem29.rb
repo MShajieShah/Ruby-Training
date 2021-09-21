@@ -15,12 +15,12 @@ def jazzify(arr)
     if item.include?("7")
 		  return arr
 	  else
-  	  item << "7"
+  	  p item << "7"
     end
   end
 	return arr
 end
-p jazzify(["G", "F", "C"])
-p jazzify(["Dm", "G", "E", "A"])
-p jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"]) 
-p jazzify([]) 
+ p jazzify(["G", "F", "C"])
+# p jazzify(["Dm", "G", "E", "A"])
+# p jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"]) 
+# p jazzify([]) 

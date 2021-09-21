@@ -9,13 +9,19 @@
 # erase("####") ➞ ""
 # ------------------------------------------------------------------------------------------------------------------------------
 def erase(str)
+  new_str = ""
   n=0
-  str.each_char.with_object('')do |c,s|
-     if c == '#'
-       n+=1
-     else
-       n.zero? ? (s<<c): n-=1
-     end
-   end
+  while n < str.length
+    item = str[n]
+    if (item == "#")
+        new_str = new_str.chop
+        n+=1
+    else
+        new_str = new_str + item
+        n+=1
+    end
+  end
+  return new_str
 end
-p erase("he##l#hel#llo")
+  p erase("######he##l#hel#llo#########")
+  p erase("major# spar##ks")
