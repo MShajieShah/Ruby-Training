@@ -23,10 +23,7 @@ def sum_odd_and_even(arr)
   	  odd_total += x
   	end
   end
-  answer = []
-  answer.push(even_total)
-  answer.push(odd_total)
-  return answer
+  return [even_total,odd_total]
 end
 
 p sum_odd_and_even([0, 0])

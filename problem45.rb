@@ -9,25 +9,23 @@
 # In order to work properly, the function should replace all "a"s with 4, "e"s with 3, "i"s with 1, "o"s with 0,
 # and "s"s with 5.
 def hacker_speak(str)
-a = ''
-str.each_char do |x|
-   if x == 'a'
-       a = a +'4'
-   elsif x == 's'
-       a = a + '5'  
-   elsif x == 'e'
-       a = a+'3'
-   elsif x ==  'i'
-       a = a + '1'
-   elsif x == 'o'
-       a = a + '0'
-   else 
-       a = a + x
-   end
-end
-return a
+  a = ""
+  str.each_char do |x|
+    if x == "a"
+      a = a + "4"
+    elsif x == "s"
+      a = a + "5"
+    elsif x == "e"
+      a = a + "3"
+    elsif x == "i"
+      a = a + "1"
+    elsif x == "o"
+      a = a + "0"
+    else
+      a = a + x
+    end
+  end
+  return a
 end
 
 p hacker_speak("javascript is cool")
-
-

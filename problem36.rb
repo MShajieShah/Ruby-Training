@@ -13,9 +13,8 @@ def two_product(arr, n)
   arr.each do |i|
     if n % i == 0
       return [n / i, i] 
-       if m.include?(i)
-         m << n / i
-       end
+      if m.include?(i)
+       m << n / i
      end
   end
   nil

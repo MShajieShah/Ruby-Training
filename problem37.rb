@@ -11,13 +11,11 @@ def convertBinary(word)
     }
   new_word=''
   word.each_char do |x|
-  	 if letter["0"].include?(x)
-  		 new_word=new_word+'0'
-  	 elsif letter["1"].include?(x)
-  		 new_word=new_word+'1'
-  	 else
-  		 new_word=new_word+'0'
-  	 end	
+  	if letter["1"].include?(x)
+  	  new_word=new_word+'1'
+  	else letter["0"].include?(x)
+  	  new_word=new_word+'0'
+  	end	
   end	
   new_word
 end	

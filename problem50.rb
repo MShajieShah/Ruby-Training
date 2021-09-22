@@ -5,9 +5,10 @@
 # emphasise("hello world") ➞ "Hello World"
 # emphasise("GOOD MORNING") ➞ "Good Morning"
 # emphasise("99 red balloons!") ➞ "99 Red Balloons!"
-def emphasise(arr)
-arr.split.map(&:capitalize).join(' ')
+def emphasise(str)
+  str.split.map(&:capitalize).join(" ")
 end
+
 p emphasise("hello world")
 p emphasise("GOOD MORNING")
 p emphasise("99 red balloons!")

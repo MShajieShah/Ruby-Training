@@ -3,12 +3,12 @@
 
 # histogram(lst, char) -> str
 # Examples
-# histogram([1, 3, 4], "#") ➞ "#\n###\n####"
+# histogram([1, 3, 4],"#") ➞ "#\n###\n####"
 # #
 # ###
 # ####
 
 def histogram(arr,ch)
-   arr.map{ |x| ch*x }.join('  ')
+   arr.map{ |x| ch*x }.join("\n")
 end
-p histogram([1,2,3], "#")
+p histogram([1,2,3],"#")

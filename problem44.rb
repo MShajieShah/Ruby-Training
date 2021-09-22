@@ -15,17 +15,17 @@
 
 def right_shift(arr ,b)
   b.times {
-     c = arr.delete_at(-1)
-     arr = arr.unshift(c)
-    }
-    return arr
+    c = arr.delete_at(-1)
+    arr = arr.unshift(c)
+  }
+  return arr
 end
 def left_shift(arr,b)
-    b.times{
-     c = arr.delete_at(0)
-     arr = arr.push(c)
-    }
-    return arr
+  b.times{
+    c = arr.delete_at(0)
+    arr = arr.push(c)
+  }
+  return arr
 end
 p left_shift([1,2,3,4,5],1)
 p left_shift([1, 2, 3, 4, 5], 3)

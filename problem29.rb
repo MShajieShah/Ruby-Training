@@ -11,16 +11,16 @@
 # jazzify([]) ➞ []
 
 def jazzify(arr)
-  arr.each do |item| 
-    if item.include?("7")
-		  return arr
-	  else
-  	  p item << "7"
-    end
-  end
-	return arr
+ arr.each do |item| 
+   if item.include?("7")
+		 item.delete("7")
+	 else
+  	 item << "7"
+   end
+ end
+  return arr
 end
- p jazzify(["G", "F", "C"])
-# p jazzify(["Dm", "G", "E", "A"])
-# p jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"]) 
-# p jazzify([]) 
+p jazzify(["G", "F7", "C"])
+p jazzify(["Dm", "G", "E", "A"])
+p jazzify(["F7", "E7", "A7", "Ab7", "Gm7", "C7"]) 
+p jazzify([]) 

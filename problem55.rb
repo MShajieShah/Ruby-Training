@@ -8,12 +8,10 @@
 # A string can contain uppercase and lowercase vowels.
 # Y is not considered a vowel.
 
-
-
-  
 def dashed(str)
-  vowels=['a','e','i','o','u','A','E','I','O','U']
-  str.chars.map{|x| (vowels.include? x)? "-"+x+"-" : x}.join
+  vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+  str.chars.map { |x| (vowels.include? x) ? "-" + x + "-" : x }.join
 end
-p dashed("Edabit") 
+
+p dashed("Edabit")
 p dashed("Carpe Diem")

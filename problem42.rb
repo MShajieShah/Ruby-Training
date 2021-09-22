@@ -10,8 +10,8 @@
 # oddishOrEvenish(373) ➞ "Oddish"
 # oddishOrEvenish(4433) ➞ "Evenish"
 
-def oddishOrEvenish(int)
-  b = int.to_s.split("")
+def oddishOrEvenish(num)
+  b = num.to_s.split("")
   c =b.inject(0) {|s,e| s.to_i + e.to_i }
   if c.odd?
      return "Oddish"
