@@ -9,10 +9,12 @@
 # transform_upvotes("20.3k 3.8k 7.7k 992") ➞ [20300, 3800, 7700, 992]
 
 def transform_upvotes(str)
-	a = ".k"
+  str = str.downcase
   arr = str.split(" ").map do |x|
     if x.include?(".")
-      (x.delete(a.downcase) + "00").to_i
+      (x.delete(".k") + "00").to_i
+    elsif x.include?("k")
+      (x.delete("k") + "00").to_i
     else
       x.to_i
     end
@@ -20,6 +22,6 @@ def transform_upvotes(str)
   arr
 end
 
-p transform_upvotes("6.8k 13.5k")
-p transform_upvotes("5.5k 8.9 32")
+p transform_upvotes("6.8K 13.5k")
+p transform_upvotes("5.5K 89 8.9k")
 p transform_upvotes("20.3k 3.8k 7.7k 992")

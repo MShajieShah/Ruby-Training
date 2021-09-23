@@ -12,11 +12,11 @@
 def odd_product(arr)
   product = 1
   arr.each do |num|
-     if num % 2 == 1
+     if num.odd?
   	   product *= num
      end
   end
-  return product
+   product
 end
 
 p odd_product([3, 4, 1, 1, 5])
