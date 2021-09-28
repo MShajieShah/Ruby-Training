@@ -38,11 +38,3 @@ end
 p chocolates_parcel(2, 1, 9
 p chocolates_parcel(4, 1, 14)
 p chocolates_parcel(1, 1, 7)
-p chocolates_parcel(3, 0, 7)
-p chocolates_parcel(2, 1, 9)
-p chocolates_parcel(58, 156, 283)
-p chocolates_parcel(3, 1000, 5012)
-p chocolates_parcel(1, 1, 1)
-p chocolates_parcel(1, 1, 8)
-p chocolates_parcel(4, 1, 12)
-p chocolates_parcel(10, 400, 2004)
