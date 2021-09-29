@@ -22,7 +22,6 @@ def is_ladder_safe(arr)
   else
     return true
   end
-  a
 end
 
 p is_ladder_safe(["#  #", "#####", "#  #", "#  #", "#####", "#  #"])

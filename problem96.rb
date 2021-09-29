@@ -20,12 +20,6 @@
 # Required number of small chocolates = 1
 
 def chocolates_parcel(small, big, weight)
-  # chocolates = {
-  #   small_chocolates: 2,
-  #   big_chocolates: 5,
-  # }
-  # a = (chocolates.values_at(:small_chocolates) * small).sum
-  # b = (chocolates.values_at(:big_chocolates) * big).sum
   a = 2* small
   b = 5* big
   if weight == a + b
