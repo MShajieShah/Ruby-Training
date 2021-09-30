@@ -9,9 +9,10 @@
 # perrin(26) ➞ 1497
 
 def perrin(n)
-	if (n <= 2) 
+  if (n <= 2)
     return [3, 0, 2][n]
   end
-	return perrin(n - 2) + perrin(n - 3)
-  end
-p perrin(26) 
+  return perrin(n - 2) + perrin(n - 3)
+end
+
+p perrin(26)

@@ -17,9 +17,7 @@ def xoequal(s)
   s = s.downcase
   if s.count('x') != s.count('o')
     puts false
-  elsif s.count('x') < 0 || s.count('o') < 0
-    puts true
-  elsif s.count('x') == s.count('o')
+  elsif s.count('x') < 0 || s.count('o') < 0 || s.count('x') == s.count('o')
     puts true
   end
 end

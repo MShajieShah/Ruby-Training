@@ -6,7 +6,7 @@
 def dnaToRna(str)
   arr = str.split("")
   new_str = ""
-  arr.each do |x|
+  arr.map do |x|
     if x == "A"
       new_str << ("U")
     elsif x == "T"

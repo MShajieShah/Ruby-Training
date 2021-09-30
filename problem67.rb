@@ -18,7 +18,7 @@ def correct_sentences(s)
   arr = s.split(" ")
   i = 1
   while i < arr.length - 1
-    arr[0] = arr[0].capitalize()
+    arr[0] = arr[0].capitalize
     if arr[i + 1][0] == arr[i + 1][0].upcase
       arr[i] += "."
     end
