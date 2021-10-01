@@ -20,15 +20,15 @@
 # Required number of small chocolates = 1
 
 def chocolates_parcel(small, big, weight)
-  a = 2* small
-  b = 5* big
+  a = 2 * small
+  b = 5 * big
   if weight == a + b
     return small
   else
-   return -1
+    return -1
   end
 end
 
-p chocolates_parcel(2, 1, 9
+p chocolates_parcel(2, 1, 9)
 p chocolates_parcel(4, 1, 14)
 p chocolates_parcel(1, 1, 7)
