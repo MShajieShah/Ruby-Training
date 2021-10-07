@@ -9,13 +9,8 @@
 #   can_build("a", "") ➞ true
 
 #   can_build("aa", "aaa") ➞ false
-def can_build(a, b)
-  c = a <=> b
-  if c == 1
-    return true
-  else
-    return false
-  end
+def can_build(s1, s2)
+  s2.chars.uniq.all? { |x| s2.count(x) <= s1.count(x) }
 end
 
 p can_build("aPPleAL", "PAL")
