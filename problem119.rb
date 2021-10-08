@@ -15,17 +15,17 @@ def letter_combinations(str)
     "8" => ["t", "u", "v"],
     "9" => ["w", "x", "y", "z"],
   }
-  new_str =[""]
+  new_str = [""]
   for i in (0...str.length)
-		a = []
-		for x in new_str
-			for char in letters[str[i]]
-				a.push(x + char)
-			end
-		end
-		new_str = a
-	end
-	return new_str
-  
+    a = []
+    for x in new_str
+      for char in letters[str[i]]
+        a.push(x + char)
+      end
+    end
+    new_str = a
+  end
+  return new_str
 end
+
 p letter_combinations("23")
