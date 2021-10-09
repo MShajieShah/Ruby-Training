@@ -27,7 +27,7 @@
 # ]
 
 # # it should accept multiple commands
-# move(two)['right']['down']['stop'] ➞ [
+# c ➞ [
 #   [0, 0],
 #   [0, 1]
 # ]
@@ -40,18 +40,24 @@
 # The result of the original function move should be callable an arbitrary number of times.
 
 def move(mat)
-  mat.each do |mov|
-    if mov == "up"
-      return mat.rotate(1)
-    elsif mov == "down"
-      return mat.rotate(-1)
-    elsif mov == "left"
-      return mat.map { |x| x.include?(1) ? x.rotate(1) : x }
-    elsif mov == "right"
-      return mat.map { |x| x.include?(1) ? x.rotate(-1) : x }
-    else mat   
-      end
+  Proc.new do |movement|
+    case movement
+    when "up" then move(mat.rotate(1))
+    when "down" then move(mat.rotate(-1))
+    when "left" then move(mat.map { |x| x.include?(1) ? x.rotate(1) : x })
+    when "right" then move(mat.map { |x| x.include?(1) ? x.rotate(-1) : x })
+    else mat
+    end
   end
 end
 
-p move(["up", "left", "right", "down"])
+def matrix(m, n, x = 0, y = 0)
+  m = (0...m).map { |_| [0] * n }
+  m[y][x] = 1; m
+end
+
+one = matrix(1, 1)
+two = matrix(2, 2)
+
+p move(two)["right"]["down"]["stop"]
+p move(two)["left"]["stop"]
