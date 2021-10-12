@@ -35,7 +35,7 @@ elsif year.digits.count == 2
     if year.to_i >= 71 && year.to_i <= 99
       year = ("19" + "#{year}").to_i
       p month_by_year(year)
-    else year >= 99 && year <= 69
+    else 
       year = ("20" + "#{year}").to_i
       p month_by_year(year)     end
   end
