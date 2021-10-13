@@ -4,7 +4,7 @@ def days_by_month(year, month)
   a = Date.new(year, month, -1).day
   j = Hash.new
   for i in 1..a
-    j[i] = Date.new(year, month, i).strftime("%A")
+    j[i] = Date.new(year, month, i).strftime("%a")
   end
   j
 end
@@ -13,7 +13,7 @@ def month_by_year(year)
   k = Hash.new
   k[year] = Hash.new
   for i in 1..12
-    k[year][(Date.new(year, i).strftime("%B")) + " #{year} "] = days_by_month(year, i)
+    k[year][(Date.new(year, i).strftime("%b")) + "-#{Date.new(year).strftime("%y")}"] = days_by_month(year, i)
   end
   k
 end
