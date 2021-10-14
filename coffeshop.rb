@@ -56,11 +56,24 @@ class CoffeeShop
   end
 
   def cheapest_item
-    min_cost = @menu.map { |x| x[:price] }.min
-    return @menu.select { |x| x[:price] == min_cost }[0][:item]
+    cost = @menu.map { |x| x[:price] }.min
+    return @menu.select { |x| x[:price] == cost }[0][:item]
   end
 
   def drinks_only
     return @menu.select { |x| x[:type] == "drink" }.map { |x| x[:item] }
   end
 end
+cs1 =CoffeeShop.new("A Little Spice", [
+	{:item => "cinnamon roll", :type => "food", :price => 4.99}, 
+	{:item => "hot chocolate", :type => "drink", :price => 2.99}, 
+	{:item => "lemon tea", :type => "drink", :price => 2.50}, 
+	{:item => "iced coffee", :type => "drink", :price => 3.00}, 
+	{:item => "vanilla chai latte", :type => "drink", :price => 4.00}
+]) 
+p cs1.add_order("cinnamon roll")
+p cs1.add_order("iced coffee")
+p cs1.fulfill_order 
+p cs1.orders
+p cs1.cheapest_item 
+p cs1.drinks_only
