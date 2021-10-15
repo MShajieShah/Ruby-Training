@@ -17,9 +17,6 @@
 # Composer.count ➞ 3
 
 class Composer
-  attr_accessor :name
-  attr_accessor :dob
-  attr_accessor :country
   @@count = 0
 
   def initialize(name, dob, country)

@@ -1,12 +1,12 @@
 require "date"
 
 def days_by_month(year, month)
-  a = Date.new(year, month, -1).day
-  j = Hash.new
-  for i in 1..a
-    j[i] = Date.new(year, month, i).strftime("%a")
+  day = Date.new(year, month, -1).day
+  date = Hash.new
+  for i in 1..day
+    date[i] = Date.new(year, month, i).strftime("%a")
   end
-  j
+  date
 end
 
 def month_by_year(year)
