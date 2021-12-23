@@ -18,9 +18,11 @@ apply_lambda(double_it, 10)
 apply_lambda(triple_it, 20)
 #-------------------------------------------------------------------------------------------------------------
 my_one_line_lambda = lambda { puts "hello" }
+my_one_line_lambda.call
 my_multi_line_lambda = lambda do
   puts "hello"
 end
+my_multi_line_lambda.call
 #-------------------------------------------------------------------------------------------------------------
 
 def build_lambda
@@ -53,6 +55,13 @@ end
 
 puts best_movie_lambda
 #--------------------------------------------------------------------------------------------------------------
+my_lambda = lambda do |*args|
+  args.each do |arg|
+    puts "I saw " + arg
+  end
+end
+my_lambda.call("a", "b", "c")
+# --------------------------------------------------------------------------------------------------------------
 #procs
 #procs accept any number of arguments. If they are passed too few arguments, the unpassed arguments are set to
 #a value of nil. If they are passed too many arguments, the extraneous arguments are dropped silently.
@@ -117,3 +126,12 @@ def best_movie_proc
 end
 
 puts best_movie_proc
+# -----------------------------------------------------------------------------------------------------------------------
+def call_proc(my_proc)
+  count = 500
+  my_proc.call
+end
+
+count = 1
+my_proc = Proc.new { puts count }
+call_proc(my_proc)
