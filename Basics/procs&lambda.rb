@@ -102,7 +102,6 @@ puts squareThenDouble.call(5)
 # ------------------------------------------------------------------------------------------------------------------
 class Array
   def eachEven(&wasABlock_nowAProc)
-    # We start with "true" because arrays start with 0, which is even.
     isEven = true
 
     self.each do |object|
@@ -110,7 +109,7 @@ class Array
         wasABlock_nowAProc.call object
       end
 
-      isEven = (not isEven)  # Toggle from even to odd, or odd to even.
+      isEven = (not isEven)
     end
   end
 end
